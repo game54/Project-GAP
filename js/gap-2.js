@@ -121,7 +121,7 @@ if (!gap2Completed && gap1Completed) {
       e.returnValue = "";
       console.log("nice");
       counterOnReload++;
-      if (counterOnReload === 3) {
+      if (counterOnReload === 1) {
         prepareWin();
       }
       console.log(counterOnReload);
