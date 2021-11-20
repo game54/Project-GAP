@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/gap.png" />
+    <link rel="stylesheet" href="gap-3.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <!-- <script defer src="js/gap-1.js"></script> -->
+    <script defer src="js/gap-3.js"></script>
+    <title>GAP</title>
+  </head>
+  <body>
+    <main class="main">
+      <header class="header center">
+        <h1>Find the password!</h1>
+        <div class="returnBox">
+          <a class="returnBtn" href="index.html"
+            ><ion-icon class="icon" name="return-up-back-outline"></ion-icon>
+          </a>
+          <div class="passwordBox">
+            <!-- <span class="smallPass">123</span> -->
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <div class="menu center">
+          <div class="results">
+            <article>
+              <div class="result">
+                <p class="message"></p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <footer class="footer center">
+        <input class="input" placeholder="Use pass to unlock level" />
+        <ion-icon
+          class="icon arrowIcon"
+          name="arrow-forward-outline"
+        ></ion-icon>
+      </footer>
+      <div class="success">
+        <h2>Congratulations. Level completed!</h2>
+        <h3>Next level unlocked</h3>
+        <div class="returnBox">
+          <a href="index.html"
+            ><ion-icon class="icon" name="return-up-back-outline"></ion-icon>
+          </a>
+        </div>
+      </div>
+      <div class="locked">
+        <h2>Level is locked!</h2>
+        <div class="returnBox">
+          <a href="index.html"
+            ><ion-icon class="icon" name="return-up-back-outline"></ion-icon>
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
