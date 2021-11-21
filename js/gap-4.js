@@ -128,7 +128,7 @@ if (!gap4Completed) {
       }, ms);
     }
     noCursor.classList.remove("noCursor");
-    mainBtn.style.cursor = "pointer";
+    mainBtn.style.cursor = "wait";
     count++;
     console.log(count);
     if (count === 5) {
