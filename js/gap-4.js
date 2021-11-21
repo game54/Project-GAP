@@ -139,7 +139,7 @@ if (!gap4Completed) {
 }
 
 h6.addEventListener("click", function () {
-  if (h1.textContent === "Almost there!") {
+  if (h1.textContent === "Almost there!" && input.value === pass) {
     validatePass();
   }
 });
