@@ -20,7 +20,7 @@ unlockLevel();
 const hint = function () {
   if (!("HintRegisteredGAP3" in localStorage)) {
     setTimeout(function () {
-      h6.style.display = "block";
+      h6.style.display = "inline-block";
       localStorage.setItem("HintRegisteredGAP3", true);
     }, 60000);
   }
