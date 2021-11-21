@@ -84,9 +84,12 @@ btn.addEventListener("click", function () {
       // console.log("Failed");
       removeEntry();
       results.insertAdjacentHTML("beforeend", htmlError);
+      // console.log(res);
     })
     .catch((err) => {
       // console.error("success");
+      // console.log(err.message);
+      if (err.message === "Failed to fetch") return;
       removeEntry();
       results.insertAdjacentHTML("beforeend", htmlSuccess);
     });
