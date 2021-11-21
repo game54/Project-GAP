@@ -1,3 +1,4 @@
+const btn = document.querySelector(".btn");
 const results = document.querySelector(".results");
 const arrowIcon = document.querySelector(".arrowIcon");
 const input = document.querySelector(".input");
