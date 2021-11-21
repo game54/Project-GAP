@@ -29,7 +29,7 @@ const hint = function () {
 if (gap3Completed) hint();
 
 const HintRegistered = localStorage.getItem("HintRegisteredGAP3");
-if (HintRegistered) h6.style.display = "block";
+if (HintRegistered) h6.style.display = "inline-block";
 
 const storage = function () {
   if (!("PassRegisteredGAP4" in localStorage)) {
