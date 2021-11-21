@@ -153,3 +153,15 @@ h6 {
   transition: opacity 1.5s;
   background-color: #eee;
 }
+
+@keyframes move {
+  30% {
+    transform: translate(200%, -200%) rotate(-90deg);
+  }
+  60% {
+    transform: translate(200%, -5000%) rotate(-90deg);
+  }
+  100% {
+    transform: translate(200%, -5000%) rotate(-90deg);
+  }
+}

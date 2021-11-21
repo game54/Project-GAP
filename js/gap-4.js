@@ -72,11 +72,9 @@ const validatePass = function () {
 };
 
 const arrowFly = function () {
-  arrowIcon.style.transform = "translateX(8000%)";
+  // arrowIcon.style.transform = "translateX(8000%)";
+  arrowIcon.style.animation = "move 3s forwards ease-in-out";
 };
-// const arrowFlyUp = function () {
-//   arrowIcon.style.transform = "translateY(-8000%)";
-// };
 
 arrowIcon.addEventListener("click", function () {
   if (input.value === `${pass}`) {
