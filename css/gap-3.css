@@ -71,6 +71,7 @@ input:focus {
 .footer {
   display: flex;
   justify-content: center;
+  padding-left: 3rem;
 }
 
 .success {
