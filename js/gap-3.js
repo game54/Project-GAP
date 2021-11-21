@@ -49,7 +49,7 @@ const htmlPassword = `
     <span class="smallPass">${pass}</span>
               `;
 
-console.log(passwordBox);
+// console.log(passwordBox);
 passwordBox.insertAdjacentHTML("beforeend", htmlPassword);
 
 const validatePass = function () {

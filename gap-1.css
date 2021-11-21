@@ -98,3 +98,8 @@ input:focus {
   padding-top: 1rem;
   font-size: 1.6rem;
 }
+
+h6 {
+  margin-top: 1rem;
+  font-style: italic;
+}

@@ -64,7 +64,7 @@ btn.addEventListener("click", function () {
 
   Promise.race([
     getJSON(`https://restcountries.com/v3.1/name/${"france"}`),
-    timeout(1.5),
+    timeout(2),
   ])
     .then((res) => {
       // console.log("Failed");

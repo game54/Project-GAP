@@ -119,9 +119,8 @@ if (!gap2Completed && gap1Completed) {
     function (e) {
       e.preventDefault();
       e.returnValue = "";
-      console.log("nice");
       counterOnReload++;
-      if (counterOnReload === 1) {
+      if (counterOnReload === 2) {
         prepareWin();
       }
       console.log(counterOnReload);
