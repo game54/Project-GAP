@@ -21,7 +21,7 @@ const hint = function () {
     setTimeout(function () {
       h6.style.display = "block";
       localStorage.setItem("HintRegistered", true);
-    }, 2000);
+    }, 60000);
   }
 };
 
