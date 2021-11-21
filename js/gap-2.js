@@ -5,6 +5,7 @@ const arrowIcon = document.querySelector(".arrowIcon");
 const input = document.querySelector(".input");
 const endWindow = document.querySelector(".success");
 const h6 = document.querySelector("h6");
+const btnQuestions = document.querySelector(".btnQuestions");
 let counter = 0;
 let counterOnReload = 0;
 
@@ -84,7 +85,6 @@ if ("gap2Completed" in localStorage) {
 const prepareWin = function () {
   removeEntry();
   results.insertAdjacentHTML("beforeend", htmlSuccess);
-  winRegister();
 };
 
 const prompting = function () {
@@ -122,7 +122,9 @@ const prompting = function () {
     results.insertAdjacentHTML("beforeend", htmlError);
   }
 };
-if (!gap2Completed && gap1Completed) setTimeout(prompting, 500);
+if (!gap2Completed && gap1Completed) {
+  btnQuestions.addEventListener("click", prompting);
+}
 
 if (!gap2Completed && gap1Completed) {
   window.addEventListener(
