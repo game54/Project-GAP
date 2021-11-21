@@ -135,6 +135,7 @@ if (!gap2Completed && gap1Completed) {
       counterOnReload++;
       if (counterOnReload === 2) {
         prepareWin();
+        winRegister();
       }
       console.log(counterOnReload);
     },
