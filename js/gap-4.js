@@ -138,7 +138,7 @@ if (!gap4Completed) {
   });
 }
 
-h1.addEventListener("click", function () {
+h6.addEventListener("click", function () {
   if (h1.textContent === "Almost there!") {
     validatePass();
   }
