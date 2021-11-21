@@ -81,7 +81,7 @@ const arrowFly = function () {
 arrowIcon.addEventListener("click", function () {
   if (input.value === `${pass}`) {
     arrowFly();
-    h1.textContent = "Almost there!";
+    h1.textContent = "Where did it go?!";
     // arrowGone = true;
   } else {
     arrowIcon.style.color = "#f03e3e";
@@ -92,7 +92,7 @@ input.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     if (input.value === `${pass}`) {
       arrowFly();
-      h1.textContent = "Almost there!";
+      h1.textContent = "Where did it go?!";
     } else {
       arrowIcon.style.color = "#f03e3e";
     }
@@ -139,7 +139,7 @@ if (!gap4Completed) {
 }
 
 h6.addEventListener("click", function () {
-  if (h1.textContent === "Almost there!" && input.value === pass) {
+  if (h1.textContent === "Where did it go?!" && input.value === pass) {
     validatePass();
   }
 });
