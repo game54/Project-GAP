@@ -8,6 +8,7 @@ const main = document.querySelector("main");
 const endWindow = document.querySelector(".success");
 const returnButton = document.querySelector(".returnBtn");
 const h1 = document.querySelector("h1");
+const h6 = document.querySelector("h6");
 let counter = 0;
 let counterOnReload = 0;
 
@@ -15,6 +16,19 @@ const unlockLevel = function () {
   if (gap1Completed) locked.style.display = "none";
 };
 unlockLevel();
+
+const hint = function () {
+  if (!("HintRegisteredGAP2" in localStorage)) {
+    setTimeout(function () {
+      h6.style.display = "block";
+      localStorage.setItem("HintRegisteredGAP2", true);
+    }, 60000);
+  }
+};
+
+if (gap1Completed) hint();
+const HintRegistered = localStorage.getItem("HintRegisteredGAP2");
+if (HintRegistered) h6.style.display = "block";
 
 const storage = function () {
   if (!("PassRegisteredGAP2" in localStorage)) {

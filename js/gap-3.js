@@ -9,11 +9,25 @@ const endWindow = document.querySelector(".success");
 const returnButton = document.querySelector(".returnBtn");
 const h1 = document.querySelector("h1");
 const passwordBox = document.querySelector(".passwordBox");
+const h6 = document.querySelector("h6");
 
 const unlockLevel = function () {
   if (gap2Completed) locked.style.display = "none";
 };
 unlockLevel();
+
+const hint = function () {
+  if (!("HintRegisteredGAP3" in localStorage)) {
+    setTimeout(function () {
+      h6.style.display = "block";
+      localStorage.setItem("HintRegisteredGAP3", true);
+    }, 60000);
+  }
+};
+
+if (gap2Completed) hint();
+const HintRegistered = localStorage.getItem("HintRegisteredGAP3");
+if (HintRegistered) h6.style.display = "block";
 
 const storage = function () {
   if (!("PassRegisteredGAP3" in localStorage)) {

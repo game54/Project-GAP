@@ -6,6 +6,7 @@ const main = document.querySelector("main");
 const endWindow = document.querySelector(".success");
 const returnButton = document.querySelector(".returnBtn");
 const h1 = document.querySelector("h1");
+const h6 = document.querySelector("h6");
 
 const getJSON = function (url, errorMsg = "something went wrong") {
   return fetch(url).then((response) => {
@@ -14,6 +15,19 @@ const getJSON = function (url, errorMsg = "something went wrong") {
     return response.json();
   });
 };
+
+const hint = function () {
+  if (!("HintRegistered" in localStorage)) {
+    setTimeout(function () {
+      h6.style.display = "block";
+      localStorage.setItem("HintRegistered", true);
+    }, 2000);
+  }
+};
+
+hint();
+const HintRegistered = localStorage.getItem("HintRegistered");
+if (HintRegistered) h6.style.display = "block";
 
 const storage = function () {
   if (!("PassRegistered" in localStorage)) {

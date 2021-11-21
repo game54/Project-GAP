@@ -118,4 +118,5 @@ input:focus {
 h6 {
   margin-top: 1rem;
   font-style: italic;
+  display: none;
 }
