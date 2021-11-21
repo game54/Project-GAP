@@ -1,11 +1,7 @@
-const btn = document.querySelector(".btn");
 const results = document.querySelector(".results");
 const arrowIcon = document.querySelector(".arrowIcon");
 const input = document.querySelector(".input");
-const main = document.querySelector("main");
 const endWindow = document.querySelector(".success");
-const returnButton = document.querySelector(".returnBtn");
-const h1 = document.querySelector("h1");
 const h6 = document.querySelector("h6");
 
 const getJSON = function (url, errorMsg = "something went wrong") {
@@ -105,10 +101,6 @@ const validatePass = function () {
 arrowIcon.addEventListener("click", validatePass);
 input.addEventListener("keypress", function (e) {
   if (e.key === "Enter") validatePass();
-});
-
-h1.addEventListener("click", function () {
-  localStorage.clear();
 });
 
 if ("gap1Completed" in localStorage) {
