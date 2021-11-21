@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  /* Does NOT work on Safari */
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  /* overflow-x: hidden; */
+  background-color: #333;
+  color: #bbb;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.marginAuto {
+  margin: 0 auto;
+}
+
+.header {
+  height: 30vh;
+  padding: 5rem;
+}
+
+.container {
+  max-width: 120rem;
+  height: 60vh;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 2.5s;
+}
+
+.returnBox {
+  position: absolute;
+  left: 5rem;
+  top: 2rem;
+  z-index: 10;
+}
+
+.result {
+  padding: 5rem;
+  font-size: 22px;
+}
+
+input:focus {
+  outline: none !important;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding-left: 3rem;
+}
+
+.success {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+}
+
+.success h2 {
+  text-align: center;
+  padding-top: 40vh;
+  font-size: 2.4rem;
+}
+
+.success h3 {
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 1.6rem;
+}
+
+.locked {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  height: 100vh;
+  width: 100vw;
+}
+
+.locked h2 {
+  text-align: center;
+  padding-top: 40vh;
+  font-size: 2.4rem;
+}
+
+h6 {
+  margin-top: 1rem;
+  font-style: italic;
+  display: none;
+}
+
+.smallPass {
+  font-size: 1px;
+  position: absolute;
+  top: 1.7rem;
+  left: 2.07rem;
+}
+
+.menu {
+  height: 80%;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.noCursor,
+.mainBtn {
+  cursor: none;
+}
+
+.mainBtn:hover {
+  background-color: #eee;
+}
+
+.mainBtn {
+  transition: opacity 1.5s;
+  background-color: #eee;
+}
