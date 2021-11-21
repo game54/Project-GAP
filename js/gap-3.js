@@ -26,6 +26,7 @@ const hint = function () {
 };
 
 if (gap2Completed) hint();
+
 const HintRegistered = localStorage.getItem("HintRegisteredGAP3");
 if (HintRegistered) h6.style.display = "block";
 
