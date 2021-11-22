@@ -74,6 +74,8 @@ const validatePass = function () {
 const arrowFly = function () {
   // arrowIcon.style.transform = "translateX(8000%)";
   arrowIcon.style.animation = "move 3s forwards ease-in-out";
+  mainBtn.style.display = "none";
+  noCursor.classList.remove("noCursor");
 };
 
 if (!gap4Completed) {
