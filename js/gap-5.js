@@ -17,8 +17,9 @@ const btnIntro = document.querySelector(".btn__intro");
 const inputIntro = document.querySelector(".inputIntro");
 const inputArrowBtn = document.querySelector(".arrowIconIntro");
 const introH3 = document.querySelector(".intro_h3");
+const main = document.querySelector(".main");
 let count = 0;
-let arrowGone = false;
+let bondBool = false;
 
 const unlockLevel = function () {
   if (gap4Completed) locked.style.display = "none";
@@ -98,6 +99,8 @@ const bond = function () {
   arrowIcon.style.transform = "scale(1) translateX(0)";
   footer.parentNode.classList.remove("footer__abs");
   arrowIcon.style.color = "#fff";
+  h6.style.display = "none";
+  bondBool = true;
 };
 
 arrowIcon.addEventListener("click", function () {
@@ -158,5 +161,18 @@ window.addEventListener("resize", function () {
     footerAbs.style.zIndex = "1";
 
     introH3.classList.add("centerAbsolute");
+    h6.classList.add("centerAbsoluteHint");
   }
 });
+
+document.addEventListener(
+  "wheel",
+  function touchHandler(e) {
+    if (window.devicePixelRatio === 0.25 && !bondBool) {
+      if (e.ctrlKey) {
+        e.preventDefault();
+      }
+    }
+  },
+  { passive: false }
+);
