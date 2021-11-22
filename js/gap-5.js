@@ -149,11 +149,14 @@ btnIntro.addEventListener("click", function () {
 window.addEventListener("resize", function () {
   console.log("resz");
   console.log(window.devicePixelRatio);
+  if (window.devicePixelRatio === 0.5) {
+    inputIntro.style.display = "none";
+    inputArrowBtn.style.display = "none";
+  }
   if (window.devicePixelRatio === 0.25) {
     introH2.classList.add("zoomOut");
     footerAbs.style.zIndex = "1";
-    inputIntro.style.display = "none";
-    inputArrowBtn.style.display = "none";
+
     introH3.classList.add("centerAbsolute");
   }
 });
