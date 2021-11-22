@@ -236,14 +236,14 @@ h6 {
 
 @keyframes moveit {
   30% {
-    transform: rotate(55deg);
+    transform: translate(-20%, 200%) rotate(55deg);
   }
   40% {
-    transform: rotate(50deg);
+    transform: translate(-20%, 200%) rotate(50deg);
   }
 
   60% {
-    transform: rotate(60deg);
+    transform: translate(-20%, 200%) rotate(60deg);
   }
   75% {
     transform: translateY(800%) rotate(75deg);
@@ -272,4 +272,11 @@ h6 {
   left: 50%;
   transform: translateX(-50%);
   transition: 0.4s;
+}
+
+.centerAbsolute {
+  position: absolute;
+  top: 40vh;
+  left: 50%;
+  transform: translateX(-50%);
 }

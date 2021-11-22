@@ -16,6 +16,7 @@ const intro = document.querySelector(".intro");
 const btnIntro = document.querySelector(".btn__intro");
 const inputIntro = document.querySelector(".inputIntro");
 const inputArrowBtn = document.querySelector(".arrowIconIntro");
+const introH3 = document.querySelector(".intro_h3");
 let count = 0;
 let arrowGone = false;
 
@@ -151,5 +152,8 @@ window.addEventListener("resize", function () {
   if (window.devicePixelRatio === 0.25) {
     introH2.classList.add("zoomOut");
     footerAbs.style.zIndex = "1";
+    inputIntro.style.display = "none";
+    inputArrowBtn.style.display = "none";
+    introH3.classList.add("centerAbsolute");
   }
 });
