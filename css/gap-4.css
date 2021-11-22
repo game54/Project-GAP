@@ -10,7 +10,7 @@ html {
   /* 10px / 16px = 0.625 = 62.5% */
   /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
-  overflow-x: hidden;
+  overflow: hidden;
 
   /* Does NOT work on Safari */
   /* scroll-behavior: smooth; */
@@ -20,7 +20,7 @@ body {
   font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
-  /* overflow-x: hidden; */
+  overflow: hidden;
   background-color: #333;
   color: #bbb;
   -webkit-touch-callout: none;
@@ -165,3 +165,26 @@ h6 {
     transform: translate(200%, -5000%) rotate(-90deg);
   }
 }
+
+/* input {
+  animation: moveit 7s forwards ease-in-out;
+}
+
+@keyframes moveit {
+  30% {
+    transform: rotate(45deg);
+  }
+  40% {
+    transform: rotate(40deg);
+  }
+
+  60% {
+    transform: rotate(50deg);
+  }
+  75% {
+    transform: translateY(500%) rotate(75deg);
+  }
+  100% {
+    transform: translateY(500%) rotate(75deg);
+  }
+}  */

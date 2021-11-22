@@ -76,28 +76,32 @@ const arrowFly = function () {
   arrowIcon.style.animation = "move 3s forwards ease-in-out";
 };
 
-arrowIcon.addEventListener("click", function () {
-  if (input.value === `${pass}`) {
-    arrowFly();
-    h1.textContent = "Where did it go?!";
-    // arrowGone = true;
-  } else {
-    arrowIcon.style.color = "#f03e3e";
-  }
-});
-
-input.addEventListener("keypress", function (e) {
-  if (e.key === "Enter") {
+if (!gap4Completed) {
+  arrowIcon.addEventListener("click", function () {
     if (input.value === `${pass}`) {
       arrowFly();
       h1.textContent = "Where did it go?!";
+      // arrowGone = true;
     } else {
       arrowIcon.style.color = "#f03e3e";
     }
-  }
+  });
+}
 
-  // if (e.key === "Enter" && arrowGone) validatePass();
-});
+if (!gap4Completed) {
+  input.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      if (input.value === `${pass}`) {
+        arrowFly();
+        h1.textContent = "Where did it go?!";
+      } else {
+        arrowIcon.style.color = "#f03e3e";
+      }
+    }
+
+    // if (e.key === "Enter" && arrowGone) validatePass();
+  });
+}
 
 if ("gap4Completed" in localStorage) {
   input.value = pass;
