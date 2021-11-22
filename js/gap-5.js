@@ -96,6 +96,7 @@ const bond = function () {
   input.style.transform = "scale(1)";
   arrowIcon.style.transform = "scale(1) translateX(0)";
   footer.parentNode.classList.remove("footer__abs");
+  arrowIcon.style.color = "#fff";
 };
 
 arrowIcon.addEventListener("click", function () {
