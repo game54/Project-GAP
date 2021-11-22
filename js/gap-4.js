@@ -9,6 +9,7 @@ const h1 = document.querySelector("h1");
 const mainBtn = document.querySelector(".mainBtn");
 const menu = document.querySelector(".menu");
 const noCursor = document.querySelector(".noCursor");
+const footer = document.querySelector(".footer");
 let count = 0;
 let arrowGone = false;
 
@@ -151,4 +152,7 @@ h6.addEventListener("click", function () {
 });
 
 // if (gap4Completed) {
-//   input
+//   input.addEventListener("focus", function (e) {
+//     e.target.style.animation = "moveit 7s forwards ease-in-out";
+//   });
+// }

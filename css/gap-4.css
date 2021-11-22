@@ -168,9 +168,9 @@ h6 {
 
 /* input {
   animation: moveit 7s forwards ease-in-out;
-}
+} */
 
-@keyframes moveit {
+/* @keyframes moveit {
   30% {
     transform: rotate(45deg);
   }
@@ -187,4 +187,4 @@ h6 {
   100% {
     transform: translateY(500%) rotate(75deg);
   }
-}  */
+} */
