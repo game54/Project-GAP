@@ -108,6 +108,7 @@ if ("gap4Completed" in localStorage) {
   mainBtn.style.display = "none";
   noCursor.classList.remove("noCursor");
   arrowIcon.style.display = "none";
+  h1.textContent = "Where did it go?!";
 }
 
 const prepareWin = function () {
