@@ -82,5 +82,4 @@ if ("gap3Completed" in localStorage) {
 const prepareWin = function () {
   removeEntry();
   results.insertAdjacentHTML("beforeend", htmlSuccess);
-  winRegister();
 };

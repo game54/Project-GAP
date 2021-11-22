@@ -19,17 +19,17 @@ const unlockLevel = function () {
 unlockLevel();
 
 const hint = function () {
-  if (!("HintRegisteredGAP3" in localStorage)) {
+  if (!("HintRegisteredGAP4" in localStorage)) {
     setTimeout(function () {
       h6.style.display = "inline-block";
-      localStorage.setItem("HintRegisteredGAP3", true);
+      localStorage.setItem("HintRegisteredGAP4", true);
     }, 60000);
   }
 };
 
 if (gap3Completed) hint();
 
-const HintRegistered = localStorage.getItem("HintRegisteredGAP3");
+const HintRegistered = localStorage.getItem("HintRegisteredGAP4");
 if (HintRegistered) h6.style.display = "inline-block";
 
 const storage = function () {
@@ -117,7 +117,6 @@ if ("gap4Completed" in localStorage) {
 const prepareWin = function () {
   removeEntry();
   results.insertAdjacentHTML("beforeend", htmlSuccess);
-  winRegister();
 };
 
 if (!gap4Completed) {
