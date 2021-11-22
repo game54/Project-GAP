@@ -107,6 +107,7 @@ if ("gap4Completed" in localStorage) {
   input.value = pass;
   mainBtn.style.display = "none";
   noCursor.classList.remove("noCursor");
+  arrowIcon.style.display = "none";
 }
 
 const prepareWin = function () {
@@ -145,3 +146,6 @@ h6.addEventListener("click", function () {
     validatePass();
   }
 });
+
+// if (gap4Completed) {
+//   input
