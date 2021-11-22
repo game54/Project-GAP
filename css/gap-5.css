@@ -67,7 +67,7 @@ body {
   position: absolute;
   left: 5rem;
   top: 2rem;
-  z-index: 10;
+  z-index: 100;
 }
 
 .result {
@@ -125,6 +125,7 @@ input {
   background-color: #333;
   height: 100vh;
   width: 100vw;
+  z-index: 10;
 }
 
 .locked h2 {
@@ -172,6 +173,11 @@ h6 {
   margin-top: 1rem;
   font-style: italic;
   display: none;
+  position: absolute;
+  top: 9vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
 }
 
 .smallPass {
