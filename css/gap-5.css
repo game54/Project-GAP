@@ -236,17 +236,17 @@ h6 {
 
 @keyframes moveit {
   30% {
-    transform: rotate(45deg);
+    transform: rotate(55deg);
   }
   40% {
-    transform: rotate(40deg);
+    transform: rotate(50deg);
   }
 
   60% {
-    transform: rotate(50deg);
+    transform: rotate(60deg);
   }
   75% {
-    transform: translateY(700%) rotate(75deg);
+    transform: translateY(800%) rotate(75deg);
   }
   100% {
     transform: translateY(5000%) rotate(75deg);
