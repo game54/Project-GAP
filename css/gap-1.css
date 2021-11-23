@@ -56,7 +56,7 @@ body {
   position: absolute;
   left: 5rem;
   top: 2rem;
-  z-index: 10;
+  z-index: 100;
 }
 
 .result {
@@ -82,6 +82,7 @@ input:focus {
   height: 100vh;
   width: 100vw;
   display: none;
+  z-index: 20;
 }
 
 .success h2 {
