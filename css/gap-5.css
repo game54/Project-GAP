@@ -226,7 +226,7 @@ h6 {
     transform: translate(100%, -300%) rotate(-145deg);
   }
   100% {
-    transform: translate(-20000%, -5000%) rotate(-145deg);
+    transform: translate(-20000%, -10000%) rotate(-145deg);
   }
 }
 
