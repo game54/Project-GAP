@@ -60,7 +60,7 @@ const htmlSuccess = `
 const htmlError = `
               <article>
                 <div class="result">
-                  <p class="message">Too fast. (<~2sec)</p>
+                  <p class="message">Too fast. ( <= ~1.5sec)</p>
                   </div>
                   `;
 
@@ -75,7 +75,7 @@ btn.addEventListener("click", function () {
 
   Promise.race([
     getJSON(`https://restcountries.com/v3.1/name/${"france"}`),
-    timeout(2),
+    timeout(1.5),
   ])
     .then((res) => {
       // console.log("Failed");
