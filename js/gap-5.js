@@ -155,13 +155,14 @@ window.addEventListener("resize", function () {
   if (window.devicePixelRatio === 0.5) {
     inputIntro.style.display = "none";
     inputArrowBtn.style.display = "none";
+    btnIntro.style.display = "none";
   }
   if (window.devicePixelRatio === 0.25) {
     introH2.classList.add("zoomOut");
     footerAbs.style.zIndex = "1";
-
     introH3.classList.add("centerAbsolute");
     h6.classList.add("centerAbsoluteHint");
+    btnIntro.style.display = "block";
   }
 });
 
@@ -169,6 +170,8 @@ const load25 = function () {
   if (window.devicePixelRatio === 0.25) {
     introH2.classList.add("zoomOut");
     footerAbs.style.zIndex = "1";
+    inputIntro.style.display = "none";
+    inputArrowBtn.style.display = "none";
   }
 };
 

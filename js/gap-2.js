@@ -98,12 +98,19 @@ const prompting = function () {
     "worst fear",
     "biggest dream",
     "...",
-    "car's brand",
+    "dream car",
     "favorite food",
     "physique",
     "kg",
     "height",
-    "gender",
+    "favorite movie",
+    "favorite scary movie",
+    "favorite country",
+    "favorite language",
+    "favorite music",
+    "phone number",
+    "ebanking password",
+    "email address",
   ];
   for (let i = 0; i < 30; i++) {
     const n = Math.trunc(Math.random() * 14);
