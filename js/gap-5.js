@@ -165,6 +165,15 @@ window.addEventListener("resize", function () {
   }
 });
 
+const load25 = function () {
+  if (window.devicePixelRatio === 0.25) {
+    introH2.classList.add("zoomOut");
+    footerAbs.style.zIndex = "1";
+  }
+};
+
+load25();
+
 document.addEventListener(
   "wheel",
   function touchHandler(e) {
