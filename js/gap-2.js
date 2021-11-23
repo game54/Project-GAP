@@ -9,6 +9,8 @@ const btnQuestions = document.querySelector(".btnQuestions");
 let counter = 0;
 let counterOnReload = 0;
 
+const date = new Date();
+
 const unlockLevel = function () {
   if (gap1Completed) locked.style.display = "none";
 };
@@ -30,7 +32,9 @@ if (HintRegistered) h6.style.display = "block";
 
 const storage = function () {
   if (!("PassRegisteredGAP2" in localStorage)) {
-    const password = Math.trunc(Math.random() * 194851254);
+    const password = Math.trunc(
+      Math.random() * date.getTime().toString().slice(6)
+    );
     localStorage.setItem("passGAP2", password);
 
     localStorage.setItem("PassRegisteredGAP2", true);

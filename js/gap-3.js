@@ -7,6 +7,8 @@ const endWindow = document.querySelector(".success");
 const passwordBox = document.querySelector(".passwordBox");
 const h6 = document.querySelector("h6");
 
+const date = new Date();
+
 const unlockLevel = function () {
   if (gap2Completed) locked.style.display = "none";
 };
@@ -28,7 +30,9 @@ if (HintRegistered) h6.style.display = "block";
 
 const storage = function () {
   if (!("PassRegisteredGAP3" in localStorage)) {
-    const password = Math.trunc(Math.random() * 19485);
+    const password = Math.trunc(
+      Math.random() * date.getTime().toString().slice(9)
+    );
     localStorage.setItem("passGAP3", password);
 
     localStorage.setItem("PassRegisteredGAP3", true);

@@ -5,6 +5,8 @@ const input = document.querySelector(".input");
 const endWindow = document.querySelector(".success");
 const h6 = document.querySelector("h6");
 
+const date = new Date();
+
 const getJSON = function (url, errorMsg = "something went wrong") {
   return fetch(url).then((response) => {
     if (!response.ok) throw new Error(`${errorMsg}(${response.status})`);
@@ -28,7 +30,9 @@ if (HintRegistered) h6.style.display = "block";
 
 const storage = function () {
   if (!("PassRegistered" in localStorage)) {
-    const password = Math.trunc(Math.random() * 194851254);
+    const password = Math.trunc(
+      Math.random() * date.getTime().toString().slice(6)
+    );
     localStorage.setItem("pass", password);
 
     localStorage.setItem("PassRegistered", true);

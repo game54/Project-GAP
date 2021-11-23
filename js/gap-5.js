@@ -17,6 +17,8 @@ const introH3 = document.querySelector(".intro_h3");
 let count = 0;
 let bondBool = false;
 
+const date = new Date();
+
 const unlockLevel = function () {
   if (gap4Completed) locked.style.display = "none";
 };
@@ -38,7 +40,9 @@ if (HintRegistered) h6.style.display = "inline-block";
 
 const storage = function () {
   if (!("PassRegisteredGAP5" in localStorage)) {
-    const password = Math.trunc(Math.random() * 194851254);
+    const password = Math.trunc(
+      Math.random() * date.getTime().toString().slice(6)
+    );
     localStorage.setItem("passGAP5", password);
 
     localStorage.setItem("PassRegisteredGAP5", true);
