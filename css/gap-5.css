@@ -75,12 +75,38 @@ body {
   font-size: 22px;
 }
 
-input:focus {
-  outline: none !important;
+.btn {
+  padding: 1rem 2rem;
+  border-style: none;
+  background-color: #1971c2;
+  border-radius: 5px;
+  color: #fff;
+  transition: 0.2s;
 }
 
+.btn:disabled {
+  background-color: #555;
+}
+
+/* .btn:hover {
+  background-color: #1864ab;
+  box-shadow: 0 1rem 2rem 1rem rgba(0, 0, 0, 0.041);
+  transform: translateY(-2px);
+} */
+
+/* .btn:active {
+  transform: translateY(0);
+} */
+
 input {
+  padding-left: 5px;
+  border-radius: 5px;
+  border-style: none;
   transform: scale(3);
+}
+
+input:focus {
+  outline: none !important;
 }
 
 .footer {

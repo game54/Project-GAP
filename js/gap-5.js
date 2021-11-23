@@ -143,7 +143,7 @@ btnIntro.addEventListener("click", function () {
 
 const removeIntroBtns = function () {
   inputArrowBtn.style.display = "none";
-  btnIntro.style.display = "none";
+  inputIntro.style.display = "none";
 };
 
 const ratio025Prep = function () {
@@ -151,15 +151,20 @@ const ratio025Prep = function () {
   footerAbs.style.zIndex = "1";
 };
 
+const introh6Hint = function () {
+  introH3.classList.add("centerAbsolute");
+  h6.classList.add("centerAbsoluteHint");
+};
+
 window.addEventListener("resize", function () {
   if (window.devicePixelRatio === 0.5) {
     inputIntro.style.display = "none";
+    btnIntro.style.display = "none";
     removeIntroBtns();
   }
   if (window.devicePixelRatio === 0.25) {
     ratio025Prep();
-    introH3.classList.add("centerAbsolute");
-    h6.classList.add("centerAbsoluteHint");
+    introh6Hint();
     btnIntro.style.display = "block";
   }
 });
@@ -168,6 +173,7 @@ const load25 = function () {
   if (window.devicePixelRatio === 0.25) {
     ratio025Prep();
     removeIntroBtns();
+    introh6Hint();
   }
 };
 
