@@ -78,9 +78,12 @@ body {
 .btn {
   padding: 1rem 2rem;
   border-style: none;
-  background: radial-gradient(#495057, #868e96);
+  background: radial-gradient(
+    rgba(134, 142, 150, 0.726),
+    rgba(73, 80, 87, 0.719)
+  );
   border-radius: 5px;
-  color: #eee;
+  color: #aaa;
   transition: 0.2s;
 }
 
