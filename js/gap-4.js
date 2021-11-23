@@ -45,6 +45,7 @@ storage();
 
 const winRegister = function () {
   localStorage.setItem("gap4Completed", true);
+  endWindow.style.display = "block";
 };
 
 const pass = localStorage.getItem("passGAP4");
@@ -67,7 +68,6 @@ const htmlPassword = `
 
 const validatePass = function () {
   if (input.value === `${pass}`) {
-    endWindow.style.display = "block";
     winRegister();
   } else arrowIcon.style.color = "#f03e3e";
 };

@@ -39,6 +39,7 @@ storage();
 
 const winRegister = function () {
   localStorage.setItem("gap1Completed", true);
+  endWindow.style.display = "block";
 };
 
 const pass = localStorage.getItem("pass");
@@ -94,7 +95,6 @@ btn.addEventListener("click", function () {
 
 const validatePass = function () {
   if (input.value === `${pass}`) {
-    endWindow.style.display = "block";
     winRegister();
   } else arrowIcon.style.color = "#f03e3e";
 };

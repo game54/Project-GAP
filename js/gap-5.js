@@ -6,9 +6,6 @@ const input = document.querySelector(".input");
 const endWindow = document.querySelector(".success");
 const h6 = document.querySelector("h6");
 const h1 = document.querySelector("h1");
-const mainBtn = document.querySelector(".mainBtn");
-const menu = document.querySelector(".menu");
-const noCursor = document.querySelector(".noCursor");
 const footer = document.querySelector(".footer");
 const introH2 = document.querySelector(".intro__title");
 const footerAbs = document.querySelector(".footer__abs");
@@ -17,7 +14,6 @@ const btnIntro = document.querySelector(".btn__intro");
 const inputIntro = document.querySelector(".inputIntro");
 const inputArrowBtn = document.querySelector(".arrowIconIntro");
 const introH3 = document.querySelector(".intro_h3");
-const main = document.querySelector(".main");
 let count = 0;
 let bondBool = false;
 
@@ -53,6 +49,7 @@ storage();
 
 const winRegister = function () {
   localStorage.setItem("gap5Completed", true);
+  endWindow.style.display = "block";
 };
 
 const pass = localStorage.getItem("passGAP5");
@@ -74,28 +71,27 @@ const htmlSuccess = `
               <p class="message">${pass}</p>
               </div>
               `;
-const htmlPassword = `
-    <span class="smallPass">${pass}</span>
-              `;
 
 const validatePass = function () {
   if (input.value === `${pass}`) {
-    endWindow.style.display = "block";
     winRegister();
   } else if (input.value != "bond") arrowIcon.style.color = "#f03e3e";
 };
 
 const arrowFly = function () {
-  // arrowIcon.style.transform = "translateX(8000%)";
   inputArrowBtn.style.animation = "move 3s forwards ease-in-out";
 };
 
-const bond = function () {
+const resetInput = function () {
   intro.style.display = "none";
   input.value = "";
   input.placeholder = "Use pass to unlock level";
   input.blur();
   input.style.transform = "scale(1)";
+};
+
+const bond = function () {
+  resetInput();
   arrowIcon.style.transform = "scale(1) translateX(0)";
   footer.parentNode.classList.remove("footer__abs");
   arrowIcon.style.color = "#fff";
@@ -104,28 +100,20 @@ const bond = function () {
 };
 
 arrowIcon.addEventListener("click", function () {
-  // if (gap5Completed in localStorage) {
   if (input.value.toLowerCase() === "bond") {
     bond();
     prepareWin();
-    console.log("bond");
-  }
-  // }
-  else {
+  } else {
     validatePass();
   }
 });
 
 input.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
-    // if (gap5Completed in localStorage) {
     if (input.value.toLowerCase() === "bond") {
       bond();
       prepareWin();
-      console.log("bond");
-    }
-    // }
-    else {
+    } else {
       validatePass();
     }
   }
@@ -149,17 +137,23 @@ btnIntro.addEventListener("click", function () {
   btnIntro.disabled = true;
 });
 
+const removeIntroBtns = function () {
+  inputArrowBtn.style.display = "none";
+  btnIntro.style.display = "none";
+};
+
+const ratio025Prep = function () {
+  introH2.classList.add("zoomOut");
+  footerAbs.style.zIndex = "1";
+};
+
 window.addEventListener("resize", function () {
-  console.log("resz");
-  console.log(window.devicePixelRatio);
   if (window.devicePixelRatio === 0.5) {
     inputIntro.style.display = "none";
-    inputArrowBtn.style.display = "none";
-    btnIntro.style.display = "none";
+    removeIntroBtns();
   }
   if (window.devicePixelRatio === 0.25) {
-    introH2.classList.add("zoomOut");
-    footerAbs.style.zIndex = "1";
+    ratio025Prep();
     introH3.classList.add("centerAbsolute");
     h6.classList.add("centerAbsoluteHint");
     btnIntro.style.display = "block";
@@ -168,10 +162,8 @@ window.addEventListener("resize", function () {
 
 const load25 = function () {
   if (window.devicePixelRatio === 0.25) {
-    introH2.classList.add("zoomOut");
-    footerAbs.style.zIndex = "1";
-    inputIntro.style.display = "none";
-    inputArrowBtn.style.display = "none";
+    ratio025Prep();
+    removeIntroBtns();
   }
 };
 
