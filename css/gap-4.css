@@ -74,9 +74,9 @@ body {
 .btn {
   padding: 0.5rem 1rem;
   border-style: none;
-  background-color: #1971c2;
+  background: radial-gradient(#495057, #868e96);
   border-radius: 5px;
-  color: #fff;
+  color: #eee;
   transition: 0.2s;
 }
 

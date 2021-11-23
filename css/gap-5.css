@@ -78,14 +78,14 @@ body {
 .btn {
   padding: 1rem 2rem;
   border-style: none;
-  background-color: #1971c2;
+  background: radial-gradient(#495057, #868e96);
   border-radius: 5px;
-  color: #fff;
+  color: #eee;
   transition: 0.2s;
 }
 
 .btn:disabled {
-  background-color: #555;
+  background: radial-gradient(rgba(34, 34, 34, 0.308), rgba(34, 34, 34, 0.308));
 }
 
 /* .btn:hover {
