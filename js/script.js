@@ -15,7 +15,7 @@ const gapsCompleted = [
 
 gapsCompleted.forEach(function (gap, i) {
   if (gap === "true") {
-    menuLi[i].textContent = `Level ${i + 1} ✅`;
+    menuLi[i].textContent = `Level ${i + 1} ✔`;
   }
 });
 
