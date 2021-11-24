@@ -141,7 +141,6 @@ h6 {
   pointer-events: none;
   /*  Hide it from screen readers */
   visibility: hidden;
-  transition: opacity 0.5s;
 }
 
 .closeEach {
