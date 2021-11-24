@@ -19,11 +19,6 @@ let bondBool = false;
 
 const date = new Date();
 
-const unlockLevel = function () {
-  if (gap4Completed) locked.style.display = "none";
-};
-unlockLevel();
-
 const hint = function () {
   if (!("HintRegisteredGAP5" in localStorage)) {
     setTimeout(function () {
@@ -51,13 +46,19 @@ const storage = function () {
 
 storage();
 
+const pass = localStorage.getItem("passGAP5");
+const gap5Completed = localStorage.getItem("gap5Completed");
+
+const unlockLevel = function () {
+  if (gap4Completed || gap5Completed) locked.style.display = "none";
+};
+
+unlockLevel();
+
 const winRegister = function () {
   localStorage.setItem("gap5Completed", true);
   endWindow.style.display = "block";
 };
-
-const pass = localStorage.getItem("passGAP5");
-const gap5Completed = localStorage.getItem("gap5Completed");
 
 const removeEntry = function () {
   const msg = document.querySelector("article");

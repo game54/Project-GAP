@@ -9,11 +9,6 @@ const h6 = document.querySelector("h6");
 
 const date = new Date();
 
-const unlockLevel = function () {
-  if (gap2Completed) locked.style.display = "none";
-};
-unlockLevel();
-
 const hint = function () {
   if (!("HintRegisteredGAP3" in localStorage)) {
     setTimeout(function () {
@@ -41,13 +36,19 @@ const storage = function () {
 
 storage();
 
+const pass = localStorage.getItem("passGAP3");
+const gap3Completed = localStorage.getItem("gap3Completed");
+
+const unlockLevel = function () {
+  if (gap2Completed || gap3Completed) locked.style.display = "none";
+};
+
+unlockLevel();
+
 const winRegister = function () {
   localStorage.setItem("gap3Completed", true);
   endWindow.style.display = "block";
 };
-
-const pass = localStorage.getItem("passGAP3");
-const gap3Completed = localStorage.getItem("gap3Completed");
 
 const removeEntry = function () {
   const msg = document.querySelector("article");

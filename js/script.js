@@ -35,14 +35,17 @@ let delBool = false;
 
 gapsCompleted.forEach(function (gap, i) {
   if (gap === "true") {
-    menuLi[i].textContent = `Level ${i + 1} ✔`;
+    // menuLi[i].textContent = `Level ${i + 1} ✔`;
+    menuLi[i].style.textDecoration = "line-through";
   }
 });
 
 trashIcon.addEventListener("click", function () {
-  localStorage.clear();
-  alert("Reset was successful");
-  location.reload();
+  if (confirm("Are you sure you want to reset all levels?")) {
+    localStorage.clear();
+    alert("Reset was successful");
+    location.reload();
+  }
 });
 
 const remove = function (i) {
