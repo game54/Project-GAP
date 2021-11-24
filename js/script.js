@@ -36,7 +36,8 @@ let delBool = false;
 gapsCompleted.forEach(function (gap, i) {
   if (gap === "true") {
     // menuLi[i].textContent = `Level ${i + 1} ✔`;
-    menuLi[i].style.textDecoration = "line-through";
+    // menuLi[i].style.textDecoration = "line-through rgba(201, 42, 42, 0.949)";
+    menuLi[i].style.color = "#37b24d";
   }
 });
 
@@ -83,22 +84,32 @@ closeIcon.addEventListener("click", function () {
   }
 });
 
-window.addEventListener("click", function () {
-  if (delBool === true)
-    closeEach.forEach((each) =>
-      each.addEventListener("click", function () {
-        remove(each.dataset.at);
-        location.reload();
-      })
-    );
+deleteIcon.addEventListener("click", function (e) {
+  if (delBool === true) {
+    if (e.target.classList.contains("closeEach")) {
+      remove(e.target.dataset.at);
+      location.reload();
+    }
+  }
 });
 
-// if (delBool === true) {
-//   menuLi.addEventListener("click", function (e) {
-//     e.preventdefault();
-//     console.log("l");
-//   });
-// }
+// window.addEventListener("click", function () {
+//   if (delBool === true)
+//     closeEach.forEach((each) =>
+//       each.addEventListener("click", function () {
+//         remove(each.dataset.at);
+//         location.reload();
+//         // console.log(each.dataset.at);
+//       })
+//     );
+// });
+
+// Event delegation
+// const ul = document.querySelector(".menu__ul");
+// ul.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   if (e.target.classList.contains("menu__li")) console.log(e.target);
+// });
 
 // document.addEventListener("contextmenu", (event) => event.preventDefault());
 
