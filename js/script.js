@@ -1,5 +1,6 @@
 const trashIcon = document.querySelector(".trash");
 const closeIcon = document.querySelector(".closeX");
+const deleteIcon = document.querySelector(".deleteIcon");
 const closeEach = document.querySelectorAll(".closeEach");
 const menuLi = document.querySelectorAll(".menu__li");
 const body = document.querySelector("body");
@@ -8,6 +9,21 @@ const gap2Completed = localStorage.getItem("gap2Completed");
 const gap3Completed = localStorage.getItem("gap3Completed");
 const gap4Completed = localStorage.getItem("gap4Completed");
 const gap5Completed = localStorage.getItem("gap5Completed");
+const HintRegistered = localStorage.getItem("hintRegistered");
+const HintRegisteredGAP2 = localStorage.getItem("HintRegisteredGAP2");
+const HintRegisteredGAP3 = localStorage.getItem("HintRegisteredGAP3");
+const HintRegisteredGAP4 = localStorage.getItem("HintRegisteredGAP4");
+const HintRegisteredGAP5 = localStorage.getItem("HintRegisteredGAP5");
+const PassRegistered = localStorage.getItem("PassRegistered");
+const PassRegisteredGAP2 = localStorage.getItem("PassRegisteredGAP2");
+const PassRegisteredGAP3 = localStorage.getItem("PassRegisteredGAP3");
+const PassRegisteredGAP4 = localStorage.getItem("PassRegisteredGAP4");
+const PassRegisteredGAP5 = localStorage.getItem("PassRegisteredGAP5");
+const pass = localStorage.getItem("pass");
+const passGAP2 = localStorage.getItem("passGAP2");
+const passGAP3 = localStorage.getItem("passGAP3");
+const passGAP4 = localStorage.getItem("passGAP4");
+const passGAP5 = localStorage.getItem("passGAP5");
 const gapsCompleted = [
   gap1Completed,
   gap2Completed,
@@ -30,21 +46,31 @@ trashIcon.addEventListener("click", function () {
 });
 
 const remove = function (i) {
+  console.log(i);
   localStorage.removeItem(`gap${i}Completed`);
+  localStorage.removeItem(`HintRegisteredGAP${i}`);
+  localStorage.removeItem(`PassRegisteredGAP${i}`);
+  localStorage.removeItem(`passGAP${i}`);
+  if (i === `1`) {
+    localStorage.removeItem(`HintRegistered`);
+    localStorage.removeItem(`HintRegistered`);
+    localStorage.removeItem(`PassRegistered`);
+    localStorage.removeItem(`pass`);
+  }
 };
 
 closeIcon.addEventListener("click", function () {
   console.log("del");
   delBool = true;
-  body.style.cursor = "pointer";
-  closeEach.forEach((each) => (each.style.opacity = "1"));
+  deleteIcon.style.opacity = "1";
+  deleteIcon.style.pointerEvents = "visible";
+  deleteIcon.style.visibility = "visible";
 });
 
 window.addEventListener("click", function () {
   if (delBool === true)
     closeEach.forEach((each) =>
-      each.addEventListener("click", function (e) {
-        // console.log(each.dataset.at);
+      each.addEventListener("click", function () {
         remove(each.dataset.at);
         location.reload();
       })

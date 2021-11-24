@@ -123,17 +123,35 @@ h6 {
   cursor: pointer;
 }
 
+.trash::before,
+.close::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 .deleteIcon {
   position: absolute;
   top: -250%;
-  left: 38%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  /* Make it unaccessible to mouse and keyboard */
+  pointer-events: none;
+  /*  Hide it from screen readers */
+  visibility: hidden;
 }
 
 .closeEach {
-  padding: 0 1.75rem;
+  padding: 0 1.35rem;
   color: #c92a2a;
   animation: shake 2s ease 0s infinite normal forwards;
-  opacity: 0;
+  /* opacity: 0; */
+  /* Make it unaccessible to mouse and keyboard */
+  /* pointer-events: none;
+  /*  Hide it from screen readers */
+  /* visibility: hidden;  */
 }
 
 .menu {
