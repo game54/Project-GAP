@@ -71,6 +71,10 @@ h6 {
   text-decoration: none;
   color: #ddd;
 }
+.menu__link:link:hover,
+.menu__link:visited:hover {
+  text-decoration: underline;
+}
 
 .icon {
   width: 2.4rem;
@@ -85,21 +89,85 @@ h6 {
 }
 
 .btnBox {
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  /* align-content: flex-start; */
+}
+
+.resetBox,
+.deleteBox {
   display: flex;
   justify-content: center;
   margin-top: 10rem;
 }
 
-.btnBox__box {
+.deleteBox {
+  margin-top: 0;
+}
+
+.resetBox__box,
+.deleteBox__box {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
 }
 
-.trash {
+.trash,
+.close {
   width: 1.6rem;
   height: 1.6rem;
   color: #fff;
   cursor: pointer;
+}
+
+.deleteIcon {
+  position: absolute;
+  top: -250%;
+  left: 38%;
+}
+
+.closeEach {
+  padding: 0 1.75rem;
+  color: #c92a2a;
+  animation: shake 2s ease 0s infinite normal forwards;
+  opacity: 0;
+}
+
+.menu {
+  position: relative;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+
+  10% {
+    transform: rotate(8deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: rotate(-10deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotate(10deg);
+  }
+
+  80% {
+    transform: rotate(-8deg);
+  }
+
+  90% {
+    transform: rotate(8deg);
+  }
 }

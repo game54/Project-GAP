@@ -34,28 +34,63 @@
     </header>
     <main class="container">
       <div class="menu">
+        <div class="deleteIcon">
+          <ion-icon
+            data-at="1"
+            class="close closeEach"
+            name="close-outline"
+          ></ion-icon>
+          <ion-icon
+            data-at="2"
+            class="close closeEach"
+            name="close-outline"
+          ></ion-icon>
+          <ion-icon
+            data-at="3"
+            class="close closeEach"
+            name="close-outline"
+          ></ion-icon>
+          <ion-icon
+            data-at="4"
+            class="close closeEach"
+            name="close-outline"
+          ></ion-icon>
+          <ion-icon
+            data-at="5"
+            class="close closeEach"
+            name="close-outline"
+          ></ion-icon>
+        </div>
         <ul class="menu__ul">
           <a class="menu__link" href="levels/gap-1.html"
-            ><li class="menu__li">Level 1</li></a
+            ><li data-id="1" class="menu__li">Level 1</li></a
           >
           <a class="menu__link" href="levels/gap-2.html"
-            ><li class="menu__li">Level 2</li></a
+            ><li data-id="2" class="menu__li">Level 2</li></a
           >
           <a class="menu__link" href="levels/gap-3.html"
-            ><li class="menu__li">Level 3</li></a
+            ><li data-id="3" class="menu__li">Level 3</li></a
           >
           <a class="menu__link" href="levels/gap-4.html"
-            ><li class="menu__li">Level 4</li></a
+            ><li data-id="4" class="menu__li">Level 4</li></a
           >
           <a class="menu__link" href="levels/gap-5.html"
-            ><li class="menu__li">Level 5</li></a
+            ><li data-id="5" class="menu__li">Level 5</li></a
           >
         </ul>
       </div>
       <div class="btnBox">
-        <div title="This deletes all your progress!" class="btnBox__box">
-          <span>Reset Progress:</span>
-          <ion-icon class="trash" name="trash-outline"></ion-icon>
+        <div class="resetBox">
+          <div title="This deletes all your progress!" class="resetBox__box">
+            <span>Reset Progress:</span>
+            <ion-icon class="trash" name="trash-outline"></ion-icon>
+          </div>
+        </div>
+        <div class="deleteBox">
+          <div title="Select a specific level to reset!" class="deleteBox__box">
+            <span>Reset level:</span>
+            <ion-icon class="close closeX" name="close-outline"></ion-icon>
+          </div>
         </div>
       </div>
     </main>

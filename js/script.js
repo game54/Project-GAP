@@ -1,5 +1,8 @@
 const trashIcon = document.querySelector(".trash");
+const closeIcon = document.querySelector(".closeX");
+const closeEach = document.querySelectorAll(".closeEach");
 const menuLi = document.querySelectorAll(".menu__li");
+const body = document.querySelector("body");
 const gap1Completed = localStorage.getItem("gap1Completed");
 const gap2Completed = localStorage.getItem("gap2Completed");
 const gap3Completed = localStorage.getItem("gap3Completed");
@@ -12,6 +15,7 @@ const gapsCompleted = [
   gap4Completed,
   gap5Completed,
 ];
+let delBool = false;
 
 gapsCompleted.forEach(function (gap, i) {
   if (gap === "true") {
@@ -24,6 +28,35 @@ trashIcon.addEventListener("click", function () {
   alert("Reset was successful");
   location.reload();
 });
+
+const remove = function (i) {
+  localStorage.removeItem(`gap${i}Completed`);
+};
+
+closeIcon.addEventListener("click", function () {
+  console.log("del");
+  delBool = true;
+  body.style.cursor = "pointer";
+  closeEach.forEach((each) => (each.style.opacity = "1"));
+});
+
+window.addEventListener("click", function () {
+  if (delBool === true)
+    closeEach.forEach((each) =>
+      each.addEventListener("click", function (e) {
+        // console.log(each.dataset.at);
+        remove(each.dataset.at);
+        location.reload();
+      })
+    );
+});
+
+// if (delBool === true) {
+//   menuLi.addEventListener("click", function (e) {
+//     e.preventdefault();
+//     console.log("l");
+//   });
+// }
 
 // document.addEventListener("contextmenu", (event) => event.preventDefault());
 
