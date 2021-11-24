@@ -38,6 +38,9 @@ gapsCompleted.forEach(function (gap, i) {
     // menuLi[i].textContent = `Level ${i + 1} ✔`;
     // menuLi[i].style.textDecoration = "line-through rgba(201, 42, 42, 0.949)";
     menuLi[i].style.color = "#37b24d";
+    closeEach[i].style.opacity = "1";
+    closeEach[i].style.pointerEvents = "visible";
+    closeEach[i].style.visibility = "visible";
   }
 });
 
@@ -63,12 +66,12 @@ const remove = function (i) {
   }
 };
 
-const showDelBtns = function () {
+const showDelBtnsBox = function () {
   deleteIcon.style.opacity = "1";
   deleteIcon.style.pointerEvents = "visible";
   deleteIcon.style.visibility = "visible";
 };
-const hideDelBtns = function () {
+const hideDelBtnsBox = function () {
   deleteIcon.style.opacity = "0";
   deleteIcon.style.pointerEvents = "none";
   deleteIcon.style.visibility = "hidden";
@@ -77,10 +80,10 @@ const hideDelBtns = function () {
 closeIcon.addEventListener("click", function () {
   if (delBool === false) {
     delBool = true;
-    showDelBtns();
+    showDelBtnsBox();
   } else {
     delBool = false;
-    hideDelBtns();
+    hideDelBtnsBox();
   }
 });
 
