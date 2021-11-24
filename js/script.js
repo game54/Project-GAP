@@ -59,12 +59,25 @@ const remove = function (i) {
   }
 };
 
-closeIcon.addEventListener("click", function () {
-  console.log("del");
-  delBool = true;
+const showDelBtns = function () {
   deleteIcon.style.opacity = "1";
   deleteIcon.style.pointerEvents = "visible";
   deleteIcon.style.visibility = "visible";
+};
+const hideDelBtns = function () {
+  deleteIcon.style.opacity = "0";
+  deleteIcon.style.pointerEvents = "none";
+  deleteIcon.style.visibility = "hidden";
+};
+
+closeIcon.addEventListener("click", function () {
+  if (delBool === false) {
+    delBool = true;
+    showDelBtns();
+  } else {
+    delBool = false;
+    hideDelBtns();
+  }
 });
 
 window.addEventListener("click", function () {
