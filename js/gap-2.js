@@ -118,16 +118,17 @@ const prompting = function () {
   ];
   for (let i = 0; i < 30; i++) {
     const n = Math.trunc(Math.random() * 14);
-    console.log(n);
+    // console.log(n);
     // console.log(options[n]);
     const promQuestions = prompt(
       `Please answer these lovely questions. What's your ${options[n]}?`
     );
     if (promQuestions === null) counter++;
-    console.log(counter);
+    // console.log(counter);
+    // console.log(promQuestions);
 
     if (counter === 16) {
-      prepareWin();
+      return prepareWin();
     }
     removeEntry();
     results.insertAdjacentHTML("beforeend", htmlError);
@@ -148,7 +149,7 @@ if (!gap2Completed && gap1Completed) {
         prepareWin();
         winRegister();
       }
-      console.log(counterOnReload);
+      // console.log(counterOnReload);
     },
     false
   );
