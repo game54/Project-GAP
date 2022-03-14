@@ -33,16 +33,38 @@ const gapsCompleted = [
 ];
 let delBool = false;
 
-gapsCompleted.forEach(function (gap, i) {
-  if (gap === "true") {
-    // menuLi[i].textContent = `Level ${i + 1} ✔`;
-    // menuLi[i].style.textDecoration = "line-through rgba(201, 42, 42, 0.949)";
-    menuLi[i].style.color = "#37b24d";
-    closeEach[i].style.opacity = "1";
-    closeEach[i].style.pointerEvents = "visible";
-    closeEach[i].style.visibility = "visible";
-  }
-});
+const checkGapsCompleted = function () {
+  gapsCompleted.forEach(function (gap, i) {
+    if (gap === "true") {
+      closeEach[i].style.opacity = "1";
+      closeEach[i].style.pointerEvents = "visible";
+      closeEach[i].style.visibility = "visible";
+    }
+  });
+};
+const checkGapsCompletedRemoval = function () {
+  gapsCompleted.forEach(function (gap, i) {
+    if (gap === "true") {
+      closeEach[i].style.opacity = "0";
+      closeEach[i].style.pointerEvents = "none";
+      closeEach[i].style.visibility = "hidden";
+    }
+  });
+};
+
+const init = function () {
+  gapsCompleted.forEach(function (gap, i) {
+    if (gap === "true") {
+      menuLi[i].style.color = "#37b24d";
+      // menuLi[i].textContent = `Level ${i + 1} ✔`;
+      // menuLi[i].style.textDecoration = "line-through rgba(201, 42, 42, 0.949)";
+      // closeEach[i].style.opacity = "1";
+      // closeEach[i].style.pointerEvents = "visible";
+      // closeEach[i].style.visibility = "visible";
+    }
+  });
+};
+init();
 
 trashIcon.addEventListener("click", function () {
   if (confirm("Are you sure you want to reset all levels?")) {
@@ -67,11 +89,13 @@ const remove = function (i) {
 };
 
 const showDelBtnsBox = function () {
+  checkGapsCompleted();
   deleteIcon.style.opacity = "1";
   deleteIcon.style.pointerEvents = "visible";
   deleteIcon.style.visibility = "visible";
 };
 const hideDelBtnsBox = function () {
+  checkGapsCompletedRemoval();
   deleteIcon.style.opacity = "0";
   deleteIcon.style.pointerEvents = "none";
   deleteIcon.style.visibility = "hidden";
